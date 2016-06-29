@@ -2,10 +2,10 @@
 
 set -e
 
-VERSION=`cat portfolio-version/number`
+VERSION=`cat version/number`
 
-pushd portfolio-service
+pushd portfolio
   ./gradlew -PversionNumber=$VERSION clean assemble
 popd
 
-cp portfolio-service/build/libs/portfolio-$VERSION.jar build/.
+cp portfolio/build/libs/portfolio-$VERSION.jar build/.
