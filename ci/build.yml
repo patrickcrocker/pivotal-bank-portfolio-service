@@ -8,7 +8,7 @@ image_resource:
     tag: '8'
 
 inputs:
-- name: portfolio
+- name: portfolio-service
 - name: version
 
 outputs:
@@ -18,4 +18,4 @@ params:
   TERM: dumb
 
 run:
-  path: portfolio/ci/build.sh
+  path: portfolio-service/ci/build.sh
