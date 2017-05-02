@@ -51,7 +51,6 @@ public class PortfolioService {
 	QuoteRemoteCallService quoteService;
 
 	@Autowired
-	@LoadBalanced
 	private RestTemplate restTemplate;
 
 	// @Value("${pivotal.quotesService.name}")

@@ -34,7 +34,6 @@ public class QuoteRemoteCallService {
 	private String quotesService;
 
 	@Autowired
-	@LoadBalanced
 	private RestTemplate restTemplate;
 
 	/**

@@ -1,8 +1,8 @@
 package io.pivotal.portfolio.service;
 
-import io.pivotal.portfolio.PortfolioApplication;
-import io.pivotal.portfolio.config.ServiceTestConfiguration;
-import io.pivotal.portfolio.domain.Quote;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.mockito.Mockito.when;
 
 import org.junit.Before;
 import org.junit.Ignore;
@@ -11,21 +11,18 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-import static org.mockito.Mockito.when;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestTemplate;
 
+import io.pivotal.portfolio.config.ServiceTestConfiguration;
+import io.pivotal.portfolio.domain.Quote;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = PortfolioApplication.class)
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class QuoteRemoteCallServiceTest {
 
 	@Value("${pivotal.quotesService.name}")
